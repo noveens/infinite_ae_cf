@@ -37,7 +37,7 @@ Once you've correctly setup the python environment, the following script will do
 
 ---
 ## How to train ∞-AE?
-- Edit the `hyper_params.py` file which lists all config parameters of ∞-AE. Note that $\lambda$ is currently grid-searched in `main.py` so changing it will bring no difference, until the code is adjusted.
+- Edit the `hyper_params.py` file which lists all config parameters of ∞-AE.
 - Finally, type the following command to train and evaluate ∞-AE:
 ```bash
 CUDA_VISIBLE_DEVICES=0 python main.py
