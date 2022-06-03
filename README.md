@@ -1,4 +1,4 @@
-# Infinite Recommendation Networks ($\infty$-AE)
+# Infinite Recommendation Networks (∞-AE)
 <!-- $\infty$-AE's implementation in JAX. Kernel-only method outperforms complicated SoTA models with a closed-form solution and a single hyper-parameter. -->
 
 This repository contains the implementation of $\infty$-AE from the paper "Infinite Recommendation Networks: A Data-Centric Approach" [[arXiv]]() where we leverage the NTK of an infinitely-wide autoencoder for implicit-feedback recommendation. Notably, $\infty$-AE:
@@ -35,7 +35,7 @@ Once you've correctly setup the python environment, the following script will do
 ```
 
 ---
-## How to train $\infty$-AE?
+## How to train ∞-AE?
 - Edit the `hyper_params.py` file which lists all config parameters of $\infty$-AE. Note that $\lambda$ is currently grid-searched in `main.py` so changing it will bring no difference, until the code is adjusted.
 - Finally, type the following command to train and evaluate $\infty$-AE:
 ```bash
