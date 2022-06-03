@@ -4,7 +4,7 @@ hyper_params = {
 
 	'depth': 1,
 	'grid_search_lamda': True,
-	'lamda': 0.1, # Only used if grid_search_lamda == False
+	'lamda': 1.0, # Only used if grid_search_lamda == False
 
 	# Number of users to keep (randomly)
 	'user_support': -1, # -1 implies use all users
