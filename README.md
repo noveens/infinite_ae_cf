@@ -1,11 +1,12 @@
 # Infinite Recommendation Networks (∞-AE)
-<!-- $\infty$-AE's implementation in JAX. Kernel-only method outperforms complicated SoTA models with a closed-form solution and a single hyper-parameter. -->
 
-This repository contains the implementation of $\infty$-AE from the paper "Infinite Recommendation Networks: A Data-Centric Approach" [[arXiv]]() where we leverage the NTK of an infinitely-wide autoencoder for implicit-feedback recommendation. Notably, $\infty$-AE:
+This repository contains the implementation of ∞-AE from the paper "Infinite Recommendation Networks: A Data-Centric Approach" [[arXiv]]() where we leverage the NTK of an infinitely-wide autoencoder for implicit-feedback recommendation. Notably, ∞-AE:
 - Is easy to implement (<50 lines of relevant code)
 - Has a closed-form solution
 - Has only a single hyper-parameter, $\lambda$
 - Even though simplistic, outperforms *all* complicated SoTA models
+
+The paper also proposes Distill-CF: how to use ∞-AE for data distillation to create terse, high-fidelity, and synthetic data summaries for model training. We provide Distill-CF's code in a separate [GitHub repository](https://github.com/noveens/distill_cf).
 
 If you find any module of this repository helpful for your own research, please consider citing the below under-review paper. Thanks!
 ```
@@ -36,8 +37,8 @@ Once you've correctly setup the python environment, the following script will do
 
 ---
 ## How to train ∞-AE?
-- Edit the `hyper_params.py` file which lists all config parameters of $\infty$-AE. Note that $\lambda$ is currently grid-searched in `main.py` so changing it will bring no difference, until the code is adjusted.
-- Finally, type the following command to train and evaluate $\infty$-AE:
+- Edit the `hyper_params.py` file which lists all config parameters of ∞-AE. Note that $\lambda$ is currently grid-searched in `main.py` so changing it will bring no difference, until the code is adjusted.
+- Finally, type the following command to train and evaluate ∞-AE:
 ```bash
 CUDA_VISIBLE_DEVICES=0 python main.py
 ```
@@ -47,14 +48,14 @@ CUDA_VISIBLE_DEVICES=0 python main.py
 
 Below are the nDCG@10 results for the datasets used in the [paper]():
 
-| Dataset           | PopRec  | MF    | NeuMF  | MVAE  | LightGCN    | EASE  | $\infty$-AE | 
+| Dataset           | PopRec  | MF    | NeuMF  | MVAE  | LightGCN    | EASE  | ∞-AE        | 
 | -------           | ------  | --    | -----  | ----  | --------    | ----  | ----------- |
 | Amazon Magazine   | 8.42    | 13.1  | 13.6   | 12.18 | 22.57       | 22.84 | **23.06**   |
 | MovieLens-1M      | 13.84   | 25.65 | 24.44  | 22.14 | 28.85       | 29.88 | **32.82**   |
 | Douban            | 11.63   | 13.21 | 13.33  | 16.17 | 16.68       | 19.48 | **24.94**   |
-| Netflix           | 12.34   | 12.04 | 11.48  | 20.85 | *Timed out* | 26.83 | **30.59***   |
+| Netflix           | 12.34   | 12.04 | 11.48  | 20.85 | *Timed out* | 26.83 | **30.59***  |
 
-*Note*: $\infty$-AE's results on the Netflix dataset (marked with a *) are obtained by training only on 5% of the total users. Note however, all other methods are trained on the *full* dataset.
+*Note*: ∞-AE's results on the Netflix dataset (marked with a *) are obtained by training only on 5% of the total users. Note however, all other methods are trained on the *full* dataset.
 
 ---
 
