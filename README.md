@@ -1,6 +1,6 @@
 # Infinite Recommendation Networks (∞-AE)
 
-This repository contains the implementation of ∞-AE from the paper "Infinite Recommendation Networks: A Data-Centric Approach" [[arXiv]]() where we leverage the NTK of an infinitely-wide autoencoder for implicit-feedback recommendation. Notably, ∞-AE:
+This repository contains the implementation of ∞-AE from the paper "Infinite Recommendation Networks: A Data-Centric Approach" [[arXiv]](https://arxiv.org/abs/2206.02626) where we leverage the NTK of an infinitely-wide autoencoder for implicit-feedback recommendation. Notably, ∞-AE:
 - Is easy to implement (<50 lines of relevant code)
 - Has a closed-form solution
 - Has only a single hyper-parameter, $\lambda$
@@ -13,7 +13,7 @@ If you find any module of this repository helpful for your own research, please 
 @article{sachdeva2022b,
   title={Infinite Recommendation Networks: A Data-Centric Approach},
   author={Sachdeva, Noveen and Dhaliwal, Mehak Preet and Wu, Carole-Jean and McAuley, Julian},
-  journal={arXiv preprint arXiv:2206.XXXXX},
+  journal={arXiv preprint arXiv:2206.02626},
   year={2022}
 }
 ```
@@ -46,7 +46,7 @@ CUDA_VISIBLE_DEVICES=0 python main.py
 ---
 ## Results sneak-peak
 
-Below are the nDCG@10 results for the datasets used in the [paper]():
+Below are the nDCG@10 results for the datasets used in the [paper](https://arxiv.org/abs/2206.02626):
 
 | Dataset           | PopRec  | MF    | NeuMF  | MVAE  | LightGCN    | EASE  | ∞-AE        | 
 | -------           | ------  | --    | -----  | ----  | --------    | ----  | ----------- |
