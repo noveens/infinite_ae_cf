@@ -32,7 +32,7 @@ pip install -r requirements.txt
 Once you've correctly setup the python environment, the following script will download the ML-1M dataset and preprocess it for usage:
 
 ```bash
-./setup.sh
+./prep.sh
 ```
 
 ---
