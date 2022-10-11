@@ -13,7 +13,9 @@ If you find any module of this repository helpful for your own research, please 
 @article{sachdeva2022b,
   title={Infinite Recommendation Networks: A Data-Centric Approach},
   author={Sachdeva, Noveen and Dhaliwal, Mehak Preet and Wu, Carole-Jean and McAuley, Julian},
-  journal={arXiv preprint arXiv:2206.02626},
+  booktitle={Advances in Neural Information Processing Systems},
+  series={NeurIPS '22},
+  publisher={Curran Associates, Inc.},
   year={2022}
 }
 ```
