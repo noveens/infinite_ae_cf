@@ -9,7 +9,7 @@ This repository contains the implementation of ∞-AE from the paper "Infinite R
 
 The paper also proposes Distill-CF: how to use ∞-AE for data distillation to create terse, high-fidelity, and synthetic data summaries for model training. We provide Distill-CF's code in a separate [GitHub repository](https://github.com/noveens/distill_cf).
 
-If you find any module of this repository helpful for your own research, please consider citing the below under-review paper. Thanks!
+If you find any module of this repository helpful for your own research, please consider citing the below paper. Thanks!
 
 ```
 @article{inf_ae_distill_cf,
